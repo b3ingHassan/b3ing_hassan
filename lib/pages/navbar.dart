@@ -72,13 +72,18 @@ Widget desktopNavBar() {
           width: 144,
           padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 12.0),
           decoration: BoxDecoration(
-            color: AppColors.primary,
+          color: AppColors.primary,
+
             borderRadius: BorderRadius.circular(4.0),
           ),
           child: const Center(
             child: Text(
               'Contact me',
-              style: TextStyle(color: Colors.white, fontSize: 500.0),
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 16.0,
+                fontWeight: FontWeight.w500,
+              ),
             ),
           ),
         )
@@ -104,12 +109,24 @@ Widget navButton(String txt) {
 }
 
 Widget navLogo() {
-  return Container(
-    width: 110,
-    decoration: const BoxDecoration(
-      image: DecorationImage(
-        image: AssetImage("assets/images/logo.png"),
+  return Row(
+    children: [
+      const Text(
+        "b3ing",
+        style: TextStyle(
+          fontSize: 20.0,
+          fontWeight: FontWeight.bold,
+          color: Colors.white,
+        ),
       ),
-    ),
+      Text(
+        "Hassan",
+        style: TextStyle(
+          fontSize: 20.0,
+          fontWeight: FontWeight.bold,
+          color: AppColors.primary75,
+        ),
+      ),
+    ],
   );
 }
