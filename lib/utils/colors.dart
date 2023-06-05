@@ -8,6 +8,8 @@ class AppColors {
   static Color bg2White = const Color(0xffEAECF2);
   static Color accent = const Color(0xffF0A43C);
   static Color txtColor1 = const Color(0xffB8B6C1);
+  static Color txtColor2 = const Color(0xff757575);
+
 
 
 

@@ -24,7 +24,9 @@ class _FooterSectionState extends State<FooterSection> {
       height: 650,
       width: double.infinity,
       color: const Color(0xff0C091F),
-      padding: const EdgeInsets.symmetric(vertical: 120),
+      padding: const EdgeInsets.symmetric(
+        horizontal: 250,
+      ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -57,6 +59,7 @@ class _FooterSectionState extends State<FooterSection> {
               fontSize: 18.0,
               fontWeight: FontWeight.normal,
               color: AppColors.bg1White,
+              letterSpacing: 0.18,
             ),
           ),
           const SizedBox(

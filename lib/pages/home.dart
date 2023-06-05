@@ -1,3 +1,4 @@
+import 'package:b3ing_hassan/pages/containers/about_section.dart';
 import 'package:b3ing_hassan/pages/containers/footer_section.dart';
 import 'package:b3ing_hassan/pages/navbar.dart';
 import 'package:b3ing_hassan/utils/constants.dart';
@@ -19,7 +20,11 @@ class _HomeState extends State<Home> {
       backgroundColor: Color(0xff130E32),
       body: SingleChildScrollView(
         child: Column(
-          children: [NavBar(), FooterSection()],
+          children: [
+            NavBar(),
+            AboutSection(),
+            FooterSection(),
+          ],
         ),
       ),
     );
