@@ -1,5 +1,7 @@
 import 'package:b3ing_hassan/pages/containers/about_section.dart';
 import 'package:b3ing_hassan/pages/containers/footer_section.dart';
+import 'package:b3ing_hassan/pages/containers/other_section.dart';
+import 'package:b3ing_hassan/pages/containers/portfolio_section.dart';
 import 'package:b3ing_hassan/pages/navbar.dart';
 import 'package:b3ing_hassan/utils/constants.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +24,9 @@ class _HomeState extends State<Home> {
         child: Column(
           children: [
             NavBar(),
+            PortfolioSection(),
             AboutSection(),
+            OtherSection(),
             FooterSection(),
           ],
         ),

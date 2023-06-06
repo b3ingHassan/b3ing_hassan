@@ -1,3 +1,4 @@
+import 'package:b3ing_hassan/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -107,10 +108,10 @@ class _AboutSectionState extends State<AboutSection> {
             ],
           ),
           Container(
-            height: 429,
-            width: 429,
+            height: w!/3.5,
+            width: w!/3.5,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12.0),
+              borderRadius: BorderRadius.circular(8.0),
               image: const DecorationImage(
                 image: AssetImage(
                   "assets/images/profilepic.jpg",
