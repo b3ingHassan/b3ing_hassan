@@ -25,11 +25,12 @@ class ProjectCustomWidget extends StatelessWidget {
               image: AssetImage(
                 imageUrl,
               ),
+              fit: BoxFit.cover
             ),
           ),
         ),
         const SizedBox(
-          height: 12,
+          height: 24,
         ),
         Text(
           title,
@@ -39,14 +40,14 @@ class ProjectCustomWidget extends StatelessWidget {
           ),
         ),
         const SizedBox(
-          height: 24,
+          height: 8,
         ),
         Text(
           subtitle,
           style: const TextStyle(
-            fontSize: 18.0,
+            fontSize: 20.0,
             height: 1.8,
-            fontWeight: FontWeight.w500,
+            fontWeight: FontWeight.normal,
             color: Color(0xff6F6F6F)
           ),
         ),

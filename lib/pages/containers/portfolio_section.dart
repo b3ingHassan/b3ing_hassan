@@ -34,7 +34,7 @@ class _PortfolioSectionState extends State<PortfolioSection> {
             Text(
               "Portfolio",
               style: TextStyle(
-                fontSize: 16.0,
+                fontSize: 20.0,
                 fontWeight: FontWeight.w500,
               ),
             ),
@@ -45,19 +45,22 @@ class _PortfolioSectionState extends State<PortfolioSection> {
               "Best Projects",
               style: TextStyle(
                 fontSize: 40.0,
-                fontWeight: FontWeight.w500,
+                fontWeight: FontWeight.bold,
               ),
             ),
             SizedBox(
-              height: 24.0,
+              height: 48.0,
             ),
             ProjectCustomWidget(
                 imageUrl: "assets/images/project1.png",
                 title: "GharTak - Food Delivery App",
                 subtitle:
                     "I designed a user-friendly food delivery app that enables customers to order multiple dishes from a single restaurant. Its intuitive interface makes browsing and ordering effortless, enhancing the overall food delivery experience."),
+           SizedBox(
+            height: 120,
+           ),
             ProjectCustomWidget(
-                imageUrl: "assets/images/project2.png",
+                imageUrl: "assets/images/project1.png",
                 title: "GharTak - Food Delivery App",
                 subtitle:
                     "I designed a user-friendly food delivery app that enables customers to order multiple dishes from a single restaurant. Its intuitive interface makes browsing and ordering effortless, enhancing the overall food delivery experience.")

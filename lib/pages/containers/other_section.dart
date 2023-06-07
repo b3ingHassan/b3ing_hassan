@@ -35,7 +35,7 @@ class _OtherSectionState extends State<OtherSection> {
           const Text(
             "Things I do in my lesuire time",
             style: TextStyle(
-              fontSize: 16.0,
+              fontSize: 20.0,
               fontWeight: FontWeight.w500,
             ),
           ),
@@ -46,7 +46,7 @@ class _OtherSectionState extends State<OtherSection> {
             "Other Interfacs",
             style: TextStyle(
               fontSize: 40.0,
-              fontWeight: FontWeight.w500,
+              fontWeight: FontWeight.bold,
             ),
           ),
           const SizedBox(
