@@ -13,9 +13,9 @@ class _NavBarState extends State<NavBar> {
   @override
   Widget build(BuildContext context) {
     // ignore: deprecated_member_use
-    return ScreenTypeLayout(
-      mobile: mobileNavBar(),
-      desktop: desktopNavBar(),
+    return ScreenTypeLayout.builder(
+      mobile: (BuildContext context) => mobileNavBar(),
+      desktop: (BuildContext context) => desktopNavBar(),
     );
   }
 }
@@ -44,7 +44,7 @@ Widget mobileNavBar() {
 
 Widget desktopNavBar() {
   return Container(
-    color: AppColors.bgColor,
+    color: AppColors.bgColor1,
     margin: const EdgeInsets.symmetric(
       horizontal: 250.0,
       vertical: 12.0,
@@ -72,8 +72,7 @@ Widget desktopNavBar() {
           width: 144,
           padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 12.0),
           decoration: BoxDecoration(
-          color: AppColors.primary,
-
+            color: AppColors.primary,
             borderRadius: BorderRadius.circular(4.0),
           ),
           child: const Center(
@@ -124,7 +123,7 @@ Widget navLogo() {
         style: TextStyle(
           fontSize: 20.0,
           fontWeight: FontWeight.bold,
-          color: AppColors.primary75,
+          color: AppColors.primary,
         ),
       ),
     ],

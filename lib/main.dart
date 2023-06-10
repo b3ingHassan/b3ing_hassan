@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'b3ing_hassan',
       theme: ThemeData(
         fontFamily: 'Poppins',
-        primaryColor: AppColors.primary,
+        primaryColor: AppColors.bgColor1,
       ),
       home: const Home(),
     );

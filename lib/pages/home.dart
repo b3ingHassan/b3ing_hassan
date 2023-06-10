@@ -1,9 +1,6 @@
-import 'package:b3ing_hassan/pages/containers/about_section.dart';
-import 'package:b3ing_hassan/pages/containers/footer_section.dart';
+import 'package:b3ing_hassan/pages/containers/design_process_section.dart';
 import 'package:b3ing_hassan/pages/containers/hero_section.dart';
-import 'package:b3ing_hassan/pages/containers/other_section.dart';
 import 'package:b3ing_hassan/pages/containers/portfolio_section.dart';
-import 'package:b3ing_hassan/pages/containers/workflow_section.dart';
 import 'package:b3ing_hassan/pages/navbar.dart';
 import 'package:b3ing_hassan/utils/constants.dart';
 import 'package:flutter/material.dart';
@@ -20,19 +17,18 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     w = MediaQuery.of(context).size.width;
     h = MediaQuery.of(context).size.height;
-    return  Scaffold(
-      backgroundColor: Color(0xff130E32),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            NavBar(),
-            HeroSection(),
-            WorkflowSection(),
-            PortfolioSection(),
-            AboutSection(),
-            OtherSection(),
-            FooterSection(),
-          ],
+    return const SafeArea(
+      child: Scaffold(
+        backgroundColor: Color(0xff130E32),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              NavBar(),
+              HeroSection(),
+              DesignProcess(),
+              PortfolioSection(),
+            ],
+          ),
         ),
       ),
     );
