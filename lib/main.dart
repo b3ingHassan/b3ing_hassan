@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Poppins',
         primaryColor: AppColors.bgColor1,
       ),
-      home: const Home(),
+      home: const Hozwme(),
     );
   }
 }
