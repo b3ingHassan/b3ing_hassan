@@ -25,7 +25,7 @@ class _PortfolioSectionState extends State<PortfolioSection> {
 
 Widget mobilePortfolioSection() {
   return Container(
-    padding: EdgeInsets.symmetric(
+    padding: const EdgeInsets.symmetric(
       horizontal: 20,
       vertical: 54.0,
     ),
@@ -36,7 +36,7 @@ Widget mobilePortfolioSection() {
       children: [
         Center(
           child: Text(
-            "PORTFOLIO",
+            "Portfolio",
             style: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w500,
@@ -44,17 +44,20 @@ Widget mobilePortfolioSection() {
             ),
           ),
         ),
+        SizedBox(
+          height: 8,
+        ),
         Center(
           child: Text(
             "Best Projects",
             style: TextStyle(
               fontSize: 28,
-              fontWeight: FontWeight.w500,
+              fontWeight: FontWeight.bold,
               color: AppColors.titleTxt,
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 24,
         ),
         Text(
@@ -65,14 +68,14 @@ Widget mobilePortfolioSection() {
             color: AppColors.titleTxt,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 12,
         ),
         Container(
           height: 350,
           color: Colors.blueGrey[50],
         ),
-        SizedBox(
+        const SizedBox(
           height: 12,
         ),
         Container(
@@ -85,7 +88,7 @@ Widget mobilePortfolioSection() {
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 12,
         ),
         Text(

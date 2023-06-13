@@ -1,7 +1,6 @@
 import 'package:b3ing_hassan/utils/colors.dart';
 import 'package:b3ing_hassan/utils/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class HeroSection extends StatefulWidget {

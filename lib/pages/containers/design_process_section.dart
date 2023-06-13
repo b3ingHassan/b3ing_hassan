@@ -27,7 +27,7 @@ Widget desktopDesignProcessLayout() {
 Widget mobileDesignProcessLayout() {
   return Container(
     width: w,
-    color: AppColors.bgWhite1,
+    color: AppColors.bgWhite2,
     padding: EdgeInsets.symmetric(horizontal: 20, vertical: 54),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -35,13 +35,16 @@ Widget mobileDesignProcessLayout() {
       children: [
         Center(
           child: Text(
-            "WORKFLOW",
+            "Workflow",
             style: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w500,
               color: AppColors.titleTxt,
             ),
           ),
+        ),
+        SizedBox(
+          height: 8,
         ),
         Center(
           child: Text(
