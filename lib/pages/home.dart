@@ -1,10 +1,10 @@
-import 'package:b3ing_hassan/pages/containers/about_section.dart';
-import 'package:b3ing_hassan/pages/containers/design_process_section.dart';
-import 'package:b3ing_hassan/pages/containers/footer_section.dart';
-import 'package:b3ing_hassan/pages/containers/hero_section.dart';
-import 'package:b3ing_hassan/pages/containers/other_section.dart';
-import 'package:b3ing_hassan/pages/containers/portfolio_section.dart';
-import 'package:b3ing_hassan/pages/navbar.dart';
+import 'package:b3ing_hassan/pages/about_section/about_me.dart';
+import 'package:b3ing_hassan/pages/footer_section/footer_section.dart';
+import 'package:b3ing_hassan/pages/header_section/navbar.dart';
+import 'package:b3ing_hassan/pages/hero_section/hero_section.dart';
+import 'package:b3ing_hassan/pages/other_section/other.dart';
+import 'package:b3ing_hassan/pages/portfolio_section/portfolio.dart';
+import 'package:b3ing_hassan/pages/work_flow_section/work_flow.dart';
 import 'package:b3ing_hassan/utils/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -28,10 +28,10 @@ class _HomeState extends State<Home> {
             children: [
               NavBar(),
               HeroSection(),
-              DesignProcess(),
-              PortfolioSection(),
-              OtherSection(),
-              AboutSection(),
+              WorkFlow(),
+              Portfolio(),
+              Others(),
+              AboutMe(),
               FooterSection(),
             ],
           ),
