@@ -14,8 +14,9 @@ class _AboutMeState extends State<AboutMe> {
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout.builder(
-      desktop: (p0) => dektopAboutSection(),
+      desktop: (p0) => desktopAboutSection(),
       mobile: (p0) => mobileAboutSection(),
+      tablet: (p0) => tabletAboutSection(),
     );
   }
 }
@@ -122,16 +123,15 @@ Widget mobileAboutSection() {
   );
 }
 
-Widget dektopAboutSection() {
+Widget desktopAboutSection() {
   return Container(
     padding: const EdgeInsets.symmetric(
-      horizontal: 250,
-      vertical: 80,
+      horizontal: 20,
+      vertical: 54,
     ),
     color: AppColors.bgWhite1,
-    width: w,
     child: Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Expanded(
           child: Column(
@@ -195,7 +195,7 @@ Widget dektopAboutSection() {
                 height: 34,
               ),
               Text(
-                "Thane, Mhaharashtra",
+                "Thane, Maharashtra",
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.normal,
@@ -220,6 +220,101 @@ Widget dektopAboutSection() {
                 ),
                 fit: BoxFit.cover,
               ),
+            ),
+          ),
+        ),
+      ],
+    ),
+  );
+}
+
+Widget tabletAboutSection() {
+  return Container(
+    padding: const EdgeInsets.symmetric(
+      horizontal: 20,
+      vertical: 54,
+    ),
+    color: AppColors.bgWhite1,
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text(
+          "Nice to meet you!",
+          style: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+        const SizedBox(
+          height: 8,
+        ),
+        const Text(
+          "Hi there I'm Hassan",
+          style: TextStyle(
+            fontSize: 34,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        const SizedBox(
+          height: 32,
+        ),
+        Text(
+          "I designed a user-friendly food delivery app that enables customers to order multiple dishes from a single restaurant. Its intuitive interface makes browsing and ordering effortless, enhancing the overall food delivery experience.",
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.normal,
+            color: AppColors.subtitleTxt2,
+            height: 1.8,
+          ),
+        ),
+        const SizedBox(
+          height: 34,
+        ),
+        Text(
+          "I’m passionate about building & designing delightful experiences with the combination of business, marketing and UX/UI design to make customers and users satisfied when they’re using products and services online.",
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.normal,
+            color: AppColors.subtitleTxt2,
+            height: 1.8,
+          ),
+        ),
+        const SizedBox(
+          height: 34,
+        ),
+        Text(
+          "In my free time I enjoy reading and illustrating quirky characters. I am quite active over dribbble and instagram, to stay updated about me follow me there!",
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.normal,
+            color: AppColors.subtitleTxt2,
+            height: 1.8,
+          ),
+        ),
+        const SizedBox(
+          height: 34,
+        ),
+        Text(
+          "Thane, Maharashtra",
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.normal,
+            color: AppColors.primary,
+            height: 1.8,
+          ),
+        ),
+        const SizedBox(
+          height: 34,
+        ),
+        Container(
+          height: 350,
+          width: 350,
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage(
+                "assets/images/profilepic.jpg",
+              ),
+              fit: BoxFit.cover,
             ),
           ),
         ),

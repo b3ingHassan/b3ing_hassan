@@ -17,6 +17,7 @@ class _OthersState extends State<Others> {
     return ScreenTypeLayout.builder(
       desktop: (BuildContext context) => desktopOtherSection(),
       mobile: (BuildContext context) => mobileOtherSection(),
+      tablet: (BuildContext context) => tabletOtherSection(),
     );
   }
 }
@@ -123,6 +124,60 @@ Widget mobileOtherSection() {
           height: 20,
         ),
         const CustomOther(imagePath: "assets/images/ghartak.png"),
+      ],
+    ),
+  );
+}
+
+Widget tabletOtherSection() {
+  return Container(
+    padding: const EdgeInsets.symmetric(
+      horizontal: 60,
+      vertical: 80,
+    ),
+    color: AppColors.bgWhite1,
+    child: const Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          "Things I do in my leisure time",
+          style: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+        SizedBox(
+          height: 8,
+        ),
+        Text(
+          "Other Design Interface",
+          style: TextStyle(
+            fontSize: 34,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        SizedBox(
+          height: 48,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            CustomOther(imagePath: "assets/images/ghartak.png"),
+            CustomOther(imagePath: "assets/images/ghartak.png"),
+            CustomOther(imagePath: "assets/images/ghartak.png"),
+          ],
+        ),
+        SizedBox(
+          height: 16,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            CustomOther(imagePath: "assets/images/ghartak.png"),
+            CustomOther(imagePath: "assets/images/ghartak.png"),
+            CustomOther(imagePath: "assets/images/ghartak.png"),
+          ],
+        ),
       ],
     ),
   );
