@@ -99,7 +99,10 @@ Widget mobileDesignProcessLayout() {
   return Container(
     width: w,
     color: AppColors.bgWhite2,
-    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 54),
+    padding: EdgeInsets.symmetric(
+      horizontal: w! * 0.034,
+      vertical: h! * 0.034,
+    ),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.center,
@@ -108,51 +111,51 @@ Widget mobileDesignProcessLayout() {
           child: Text(
             "Workflow",
             style: TextStyle(
-              fontSize: 16,
+              fontSize: w!*0.025,
               fontWeight: FontWeight.w500,
               color: AppColors.titleTxt,
             ),
           ),
         ),
-        const SizedBox(
-          height: 8,
+         SizedBox(
+          height: w!*0.008,
         ),
         Center(
           child: Text(
             "Design Process",
             style: TextStyle(
-              fontSize: 28,
+              fontSize: w!*0.05,
               fontWeight: FontWeight.bold,
               color: AppColors.titleTxt,
             ),
           ),
         ),
-        const SizedBox(
-          height: 24,
+       SizedBox(
+          height: w!*0.04,
         ),
         const CustomWorkFlowMobile(
           title: "Research",
           description:
               "This is how everything starts. Gathering information about the project to understand the problem space and identitfying the pain points to outline the scope and better identify the requirements.",
         ),
-        const SizedBox(
-          height: 48,
+        SizedBox(
+          height: w!*0.06,
         ),
         const CustomWorkFlowMobile(
           title: "Strategy",
           description:
               "Planning in the right direction after the identification of the problem space and stiching the right solution according to that is very cruicial.",
         ),
-        const SizedBox(
-          height: 48,
+        SizedBox(
+          height: w!*0.06,
         ),
         const CustomWorkFlowMobile(
           title: "Design",
           description:
               "After the end of this phase you will have pixel perfect designs for your mobile/ web application. Stimulating interactions, robust design systems, I have done it all for my various freelance clients before.",
         ),
-        const SizedBox(
-          height: 48,
+       SizedBox(
+          height: w!*0.06,
         ),
         const CustomWorkFlowMobile(
           title: "Testing",

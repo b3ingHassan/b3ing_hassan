@@ -1,4 +1,5 @@
 import 'package:b3ing_hassan/utils/colors.dart';
+import 'package:b3ing_hassan/utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class CustomWorkFlowMobile extends StatelessWidget {
@@ -13,22 +14,23 @@ class CustomWorkFlowMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    w = MediaQuery.of(context).size.width;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
           title,
           style: TextStyle(
-            fontSize: 24,
+            fontSize: w! * 0.04,
             fontWeight: FontWeight.w500,
             color: AppColors.titleTxt,
           ),
         ),
-        const SizedBox(height: 12),
+        SizedBox(height: w! * 0.008),
         Text(
           description,
           style: TextStyle(
-            fontSize: 18,
+            fontSize: w! * 0.035,
             height: 1.8,
             fontWeight: FontWeight.normal,
             color: AppColors.subtitleTxt2,

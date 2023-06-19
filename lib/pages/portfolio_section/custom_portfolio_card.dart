@@ -1,4 +1,5 @@
 import 'package:b3ing_hassan/utils/colors.dart';
+import 'package:b3ing_hassan/utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class CustomPortFolio extends StatelessWidget {
@@ -15,20 +16,23 @@ class CustomPortFolio extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    w = MediaQuery.of(context).size.width;
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
           title,
           style: TextStyle(
-            fontSize: 20.0,
+            fontSize: w! * 0.04,
             fontWeight: FontWeight.w500,
             color: AppColors.titleTxt,
           ),
         ),
-        const SizedBox(height: 12),
+        SizedBox(height: w! * 0.025),
         Container(
-          height: 220,
+          height: w! * 0.5,
+          width: w!,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(
               6,
@@ -39,12 +43,14 @@ class CustomPortFolio extends StatelessWidget {
             ),
           ),
         ),
-        const SizedBox(height: 12),
+        SizedBox(height: w! * 0.025),
         Text(
           description,
           textAlign: TextAlign.justify,
           style: TextStyle(
-            fontSize: 16,
+            fontSize: w! * 0.035,
+          
+          
             height: 1.8,
             fontWeight: FontWeight.normal,
             color: AppColors.subtitleTxt2,

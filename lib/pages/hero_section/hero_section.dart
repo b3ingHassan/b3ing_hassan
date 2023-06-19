@@ -26,12 +26,11 @@ Widget dektopLayout() {
 
 Widget mobileLayout() {
   return Container(
-    height: h! * 0.80,
     width: w,
     color: AppColors.bgColor1,
-    padding: const EdgeInsets.symmetric(
-      horizontal: 20.0,
-      vertical: 20.0,
+    padding: EdgeInsets.symmetric(
+      horizontal: w! * 0.034,
+      vertical: h! * 0.024,
     ),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -51,53 +50,48 @@ Widget mobileLayout() {
             AppColors.accent,
           ),
         ),
-        const SizedBox(
-          height: 8.0,
+        SizedBox(
+          height: w! * 0.008,
         ),
-        ConstrainedBox(
-          constraints: BoxConstraints(
-            maxWidth: w! * 0.8,
-          ),
-          child: Text(
-            "Creating Engaging Interfaces that Connect Users with Purposeful Design Solutions.",
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.normal,
-              color: AppColors.subtitleTxt1,
-            ),
+        Text(
+          "Creating Engaging Interfaces that Connect\nUsers with Purposeful Design Solutions.",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: w! * 0.04,
+            fontWeight: FontWeight.normal,
+            color: AppColors.subtitleTxt1,
           ),
         ),
-        const SizedBox(
-          height: 24.0,
+         SizedBox(
+          height: w!*0.03,
         ),
         Container(
-          height: 48,
-          width: 200,
-          padding: const EdgeInsets.symmetric(
-            horizontal: 24.0,
+          height: w!*0.09,
+          width: w!*0.4,
+          padding:  EdgeInsets.symmetric(
+             horizontal: w! * 0.034,
           ),
           decoration: BoxDecoration(
             color: AppColors.primary,
             borderRadius: BorderRadius.circular(4.0),
           ),
-          child: const Center(
+          child:  Center(
             child: Text(
               'Download Resume',
               style: TextStyle(
                 color: Colors.white,
-                fontSize: 16.0,
+                fontSize: w!*0.028,
                 fontWeight: FontWeight.normal,
               ),
             ),
           ),
         ),
-        const SizedBox(
-          height: 48,
+         SizedBox(
+          height: w!*0.08,
         ),
         Container(
-          height: h! * 0.4,
-          width: w!,
+          height: w! * 0.8,
+          width: w,
           decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage(
@@ -114,7 +108,7 @@ Widget mobileLayout() {
 
 TextStyle primaryTextStyle(Color color) {
   return TextStyle(
-    fontSize: 44.0,
+    fontSize: w! * 0.08,
     fontWeight: FontWeight.bold,
     color: color,
   );

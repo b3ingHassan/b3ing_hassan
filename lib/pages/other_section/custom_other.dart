@@ -1,3 +1,4 @@
+import 'package:b3ing_hassan/utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class CustomOther extends StatelessWidget {
@@ -9,8 +10,10 @@ class CustomOther extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    w = MediaQuery.of(context).size.width;
     return Container(
-      height: 320,
+      height: w! * 0.55,
+      width: w,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(
           6,

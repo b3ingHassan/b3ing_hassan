@@ -80,9 +80,9 @@ Widget desktopOtherSection() {
 
 Widget mobileOtherSection() {
   return Container(
-    padding: const EdgeInsets.symmetric(
-      horizontal: 20,
-      vertical: 54,
+    padding: EdgeInsets.symmetric(
+      horizontal: w! * 0.034,
+      vertical: h! * 0.034,
     ),
     color: AppColors.bgWhite1,
     child: Column(
@@ -93,35 +93,35 @@ Widget mobileOtherSection() {
           child: Text(
             "Things I do in my lesuire time",
             style: TextStyle(
-              fontSize: 16,
+              fontSize: w! * 0.025,
               fontWeight: FontWeight.w500,
               color: AppColors.titleTxt,
             ),
           ),
         ),
-        const SizedBox(
-          height: 8,
+        SizedBox(
+          height: w! * 0.008,
         ),
         Center(
           child: Text(
             "Other Design Interface",
             style: TextStyle(
-              fontSize: 28,
+              fontSize: w! * 0.05,
               fontWeight: FontWeight.bold,
               color: AppColors.titleTxt,
             ),
           ),
         ),
-        const SizedBox(
-          height: 24,
+           SizedBox(
+          height: w! * 0.04,
         ),
         const CustomOther(imagePath: "assets/images/ghartak.png"),
-        const SizedBox(
-          height: 20,
+         SizedBox(
+          height: w! * 0.08,
         ),
         const CustomOther(imagePath: "assets/images/ghartak.png"),
-        const SizedBox(
-          height: 20,
+         SizedBox(
+          height: w! * 0.08,
         ),
         const CustomOther(imagePath: "assets/images/ghartak.png"),
       ],

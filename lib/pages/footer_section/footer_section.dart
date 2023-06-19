@@ -13,21 +13,21 @@ class FooterSection extends StatefulWidget {
 class _FooterSectionState extends State<FooterSection> {
   @override
   Widget build(BuildContext context) {
+    w = MediaQuery.of(context).size.width;
+
     return ScreenTypeLayout.builder(
       desktop: (p0) => dektopFooterSection(),
       mobile: (p0) => mobileFooterSection(),
-      tablet: (p0) => tabletFooterSection(),
     );
   }
 }
 
-tabletFooterSection() {
+Widget mobileFooterSection() {
   return Container(
-    height: h! * 0.5,
     width: w,
-    padding: const EdgeInsets.symmetric(
-      horizontal: 150,
-      vertical: 60,
+    padding: EdgeInsets.symmetric(
+      horizontal: w! * 0.034,
+      vertical: h! * 0.15,
     ),
     color: AppColors.bgColor2,
     child: Column(
@@ -37,49 +37,55 @@ tabletFooterSection() {
         Text(
           "Get in touch",
           style: TextStyle(
-            fontSize: 18,
+            fontSize: w! * 0.035,
             fontWeight: FontWeight.w500,
             color: AppColors.subtitleTxt1,
           ),
         ),
-        const SizedBox(
-          height: 8,
+        SizedBox(
+          height: w! * 0.008,
         ),
         Text(
           "Let's Connect",
           style: TextStyle(
-            fontSize: 36,
+            fontSize: w! * 0.08,
             fontWeight: FontWeight.bold,
             color: AppColors.accent,
           ),
         ),
-        const SizedBox(
-          height: 12,
+        SizedBox(
+          height: w! * 0.008,
         ),
         Text(
-          "Have a project or opportunity in mind? Let's have a nice\nchat over it. Contact me here or email me at",
+          "Have a project or opportunity in mind? Let's have a nice chat over it. Contact me here or email me at",
           textAlign: TextAlign.center,
           style: TextStyle(
-            fontSize: 16,
-            height: 1.6,
+            fontSize: w! * 0.036,
             fontWeight: FontWeight.normal,
             color: AppColors.subtitleTxt1,
           ),
         ),
-        const SizedBox(
-          height: 20,
+        SizedBox(
+          height: w! * 0.05,
         ),
         Container(
-          width: 230,
-          padding: const EdgeInsets.symmetric(
-            horizontal: 20,
-            vertical: 12,
+          height: w! * 0.09,
+          width: w! * 0.5,
+          padding: EdgeInsets.symmetric(
+            horizontal: w! * 0.034,
           ),
-          color: AppColors.primary,
+          decoration: BoxDecoration(
+            color: AppColors.primary,
+            borderRadius: BorderRadius.circular(4.0),
+          ),
           child: Center(
             child: Text(
-              "hassanwm99@gmail.com",
-              style: TextStyle(fontSize: 14, color: AppColors.bgWhite1),
+              'hassanwm99@gmail.com',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: w! * 0.028,
+                fontWeight: FontWeight.normal,
+              ),
             ),
           ),
         ),
@@ -127,7 +133,7 @@ dektopFooterSection() {
           "Have a project or opportunity in mind? Let's have a nice\nchat over it. Contact me here or email me at",
           textAlign: TextAlign.center,
           style: TextStyle(
-            fontSize: 20,
+            fontSize: w! * 0.04,
             height: 1.8,
             fontWeight: FontWeight.normal,
             color: AppColors.subtitleTxt1,
@@ -150,70 +156,6 @@ dektopFooterSection() {
             ),
           ),
         ),
-      ],
-    ),
-  );
-}
-
-mobileFooterSection() {
-  return Container(
-    padding: const EdgeInsets.symmetric(
-      horizontal: 20,
-      vertical: 120,
-    ),
-    color: AppColors.bgColor2,
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text(
-          "Get in touch",
-          style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.normal,
-              color: AppColors.bgWhite1),
-        ),
-        const SizedBox(
-          height: 8,
-        ),
-        Text(
-          "Let's Connect",
-          style: TextStyle(
-            fontSize: 44,
-            fontWeight: FontWeight.bold,
-            color: AppColors.accent,
-          ),
-        ),
-        const SizedBox(
-          height: 8,
-        ),
-        Text(
-          "Have a project or opportunity in mind? Let's have a nice chat over it. Contact me here or email me at",
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            fontSize: 18,
-            height: 1.8,
-            fontWeight: FontWeight.normal,
-            color: AppColors.subtitleTxt2,
-          ),
-        ),
-        const SizedBox(
-          height: 24,
-        ),
-        Container(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 24,
-            vertical: 12,
-          ),
-          color: AppColors.primary,
-          child: Text(
-            "hassanwm99@gmail.com",
-            style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.normal,
-                color: AppColors.bgWhite1),
-          ),
-        )
       ],
     ),
   );

@@ -23,9 +23,9 @@ class _AboutMeState extends State<AboutMe> {
 
 Widget mobileAboutSection() {
   return Container(
-    padding: const EdgeInsets.symmetric(
-      horizontal: 20,
-      vertical: 54,
+    padding: EdgeInsets.symmetric(
+      horizontal: w! * 0.034,
+      vertical: h! * 0.034,
     ),
     color: AppColors.bgWhite1,
     child: Column(
@@ -36,31 +36,31 @@ Widget mobileAboutSection() {
           child: Text(
             "Nice to meet you!",
             style: TextStyle(
-              fontSize: 16,
+              fontSize: w! * 0.025,
               fontWeight: FontWeight.w500,
               color: AppColors.titleTxt,
             ),
           ),
         ),
-        const SizedBox(
-          height: 8,
+        SizedBox(
+          height: w! * 0.008,
         ),
         Center(
           child: Text(
             "Hi there I'm Hassan",
             style: TextStyle(
-              fontSize: 28,
+              fontSize: w! * 0.05,
               fontWeight: FontWeight.bold,
               color: AppColors.titleTxt,
             ),
           ),
         ),
-        const SizedBox(
-          height: 12,
+        SizedBox(
+          height: w! * 0.04,
         ),
         Container(
-          height: h! * 0.4,
-          width: w!,
+          height: w! * 0.8,
+          width: w,
           decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage(
@@ -70,49 +70,49 @@ Widget mobileAboutSection() {
             ),
           ),
         ),
-        const SizedBox(
-          height: 12,
+        SizedBox(
+          height: w! * 0.04,
         ),
         Text(
           "I designed a user-friendly food delivery app that enables customers to order multiple dishes from a single restaurant. Its intuitive interface makes browsing and ordering effortless, enhancing the overall food delivery experience.",
           style: TextStyle(
-            fontSize: 18,
+            fontSize: w! * 0.035,
             height: 1.8,
             fontWeight: FontWeight.normal,
             color: AppColors.subtitleTxt2,
           ),
         ),
-        const SizedBox(
-          height: 24,
+        SizedBox(
+          height: w! * 0.04,
         ),
         Text(
           "I designed a user-friendly food delivery app that enables customers to order multiple dishes from a single restaurant. Its intuitive interface makes browsing and ordering effortless, enhancing the overall food delivery experience.",
           style: TextStyle(
-            fontSize: 18,
+            fontSize: w! * 0.035,
             height: 1.8,
             fontWeight: FontWeight.normal,
             color: AppColors.subtitleTxt2,
           ),
         ),
-        const SizedBox(
-          height: 24,
+        SizedBox(
+          height: w! * 0.04,
         ),
         Text(
           "I designed a user-friendly food delivery app that enables customers to order multiple dishes from a single restaurant. Its intuitive interface makes browsing and ordering effortless, enhancing the overall food delivery experience.",
           style: TextStyle(
-            fontSize: 18,
+            fontSize: w! * 0.035,
             height: 1.8,
             fontWeight: FontWeight.normal,
             color: AppColors.subtitleTxt2,
           ),
         ),
-        const SizedBox(
-          height: 24,
+        SizedBox(
+          height: w! * 0.04,
         ),
         Text(
           "Thane, Maharashtra",
           style: TextStyle(
-            fontSize: 18,
+            fontSize: w! * 0.035,
             height: 1.8,
             fontWeight: FontWeight.normal,
             color: AppColors.primary,

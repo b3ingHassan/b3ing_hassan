@@ -84,9 +84,9 @@ class _PortfolioState extends State<Portfolio> {
 
 Widget mobilePortfolioSection() {
   return Container(
-    padding: const EdgeInsets.symmetric(
-      horizontal: 20,
-      vertical: 54.0,
+    padding: EdgeInsets.symmetric(
+      horizontal: w! * 0.034,
+      vertical: h! * 0.034,
     ),
     color: AppColors.bgWhite1,
     child: Column(
@@ -97,27 +97,27 @@ Widget mobilePortfolioSection() {
           child: Text(
             "Portfolio",
             style: TextStyle(
-              fontSize: 16,
+              fontSize: w! * 0.025,
               fontWeight: FontWeight.w500,
               color: AppColors.titleTxt,
             ),
           ),
         ),
-        const SizedBox(
-          height: 8,
+         SizedBox(
+          height: w!*0.008,
         ),
         Center(
           child: Text(
             "Best Projects",
             style: TextStyle(
-              fontSize: 28,
+              fontSize: w! * 0.05,
               fontWeight: FontWeight.bold,
               color: AppColors.titleTxt,
             ),
           ),
         ),
-        const SizedBox(
-          height: 24,
+        SizedBox(
+          height: w! * 0.04,
         ),
         const CustomPortFolio(
           title: "GharTak - Food Delivery App",
@@ -125,8 +125,8 @@ Widget mobilePortfolioSection() {
               "I designed a user-friendly food delivery app that enables customers to order multiple dishes from a single restaurant. Its intuitive interface makes browsing and ordering effortless, enhancing the overall food delivery experience.",
           imagePath: "assets/images/ghartak.png",
         ),
-        const SizedBox(
-          height: 48,
+        SizedBox(
+          height: w! * 0.08,
         ),
         const CustomPortFolio(
           title: "GharTak - Food Delivery App",
