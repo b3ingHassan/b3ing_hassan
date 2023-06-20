@@ -49,8 +49,6 @@ class CustomPortFolio extends StatelessWidget {
           textAlign: TextAlign.justify,
           style: TextStyle(
             fontSize: w! * 0.035,
-          
-          
             height: 1.8,
             fontWeight: FontWeight.normal,
             color: AppColors.subtitleTxt2,
@@ -75,11 +73,13 @@ class CustomPortFolioDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    w = MediaQuery.of(context).size.width;
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          height: 550,
+          height: w! * 0.35,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(
               6,
@@ -90,23 +90,23 @@ class CustomPortFolioDesktop extends StatelessWidget {
             ),
           ),
         ),
-        const SizedBox(
-          height: 24,
+        SizedBox(
+          height: w! * 0.012,
         ),
         Text(
           title,
           style: TextStyle(
-            fontSize: 24.0,
+            fontSize: w! * 0.012,
             fontWeight: FontWeight.w500,
             color: AppColors.titleTxt,
           ),
         ),
-        const SizedBox(height: 8),
+         SizedBox(height: w!*0.002),
         Text(
           description,
           textAlign: TextAlign.justify,
           style: TextStyle(
-            fontSize: 18,
+            fontSize: w! * 0.011,
             height: 1.8,
             fontWeight: FontWeight.normal,
             color: AppColors.subtitleTxt2,

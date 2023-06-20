@@ -53,24 +53,25 @@ class CustomWorkFlowDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    w = MediaQuery.of(context).size.width;
     return SizedBox(
-      width: 500,
+      width: w! * 0.3,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             title,
             style: TextStyle(
-              fontSize: 32,
+              fontSize: w! * 0.012,
               fontWeight: FontWeight.w500,
               color: AppColors.titleTxt,
             ),
           ),
-          const SizedBox(height: 8),
+          SizedBox(height: w! * 0.002),
           Text(
             description,
             style: TextStyle(
-              fontSize: 18,
+              fontSize: w! * 0.011,
               height: 1.8,
               fontWeight: FontWeight.normal,
               color: AppColors.subtitleTxt2,

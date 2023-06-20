@@ -21,15 +21,12 @@ class _HeroSectionState extends State<HeroSection> {
 }
 
 Widget dektopLayout() {
-  return Container();
-}
-
-Widget mobileLayout() {
   return Container(
-    width: w,
-    margin: EdgeInsets.symmetric(
-      horizontal: w! * 0.050,
-      vertical: h! * 0.044,
+    height: w! * 0.52,
+    color: AppColors.bgColor1,
+    padding: EdgeInsets.symmetric(
+      horizontal: w! * 0.125,
+      vertical: w! * 0.08,
     ),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -38,25 +35,92 @@ Widget mobileLayout() {
         Text(
           "I'm Hassan Momin",
           textAlign: TextAlign.center,
-          style: primaryTextStyle(
+          style: dprimaryTextStyle(
             AppColors.bgWhite1,
           ),
         ),
         Text(
           "UI UX Designer",
           textAlign: TextAlign.center,
-          style: primaryTextStyle(
+          style: dprimaryTextStyle(
             AppColors.accent,
           ),
         ),
         SizedBox(
-          height: w! * 0.04,
+          height: w! * 0.01,
         ),
         Text(
           "Creating Engaging Interfaces that Connect\nUsers with Purposeful Design Solutions.",
           textAlign: TextAlign.center,
           style: TextStyle(
-            fontSize: w! * 0.036,
+            fontSize: w! * 0.011,
+            letterSpacing: 1,
+            height: 1.6,
+            fontWeight: FontWeight.normal,
+            color: AppColors.subtitleTxt1,
+          ),
+        ),
+        SizedBox(
+          height: w! * 0.02,
+        ),
+        Container(
+          height: w! * 0.035,
+          width: w! * 0.16,
+         
+          decoration: BoxDecoration(
+            color: AppColors.primary,
+            borderRadius: BorderRadius.circular(4.0),
+          ),
+          child: Center(
+            child: Text(
+              'Download Resume',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: w! * 0.010,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+          ),
+        ),
+      ],
+    ),
+  );
+}
+
+Widget mobileLayout() {
+  return Container(
+    height: w!*1.56,
+    width: w,
+    margin: EdgeInsets.symmetric(
+      horizontal: w! * 0.050,
+      vertical: h! * 0.034,
+    ),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          "I'm Hassan Momin",
+          textAlign: TextAlign.center,
+          style: mprimaryTextStyle(
+            AppColors.bgWhite1,
+          ),
+        ),
+        Text(
+          "UI UX Designer",
+          textAlign: TextAlign.center,
+          style: mprimaryTextStyle(
+            AppColors.accent,
+          ),
+        ),
+        SizedBox(
+          height: w! * 0.02,
+        ),
+        Text(
+          "Creating Engaging Interfaces that Connect\nUsers with Purposeful Design Solutions.",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: w! * 0.026,
             letterSpacing: 1,
             height: 1.6,
             fontWeight: FontWeight.normal,
@@ -67,11 +131,8 @@ Widget mobileLayout() {
           height: w! * 0.04,
         ),
         Container(
-          height: w! * 0.12,
-          width: w! * 0.42,
-          padding: EdgeInsets.symmetric(
-            horizontal: w! * 0.034,
-          ),
+          height: w! * 0.08,
+          width: w! * 0.35,
           decoration: BoxDecoration(
             color: AppColors.primary,
             borderRadius: BorderRadius.circular(4.0),
@@ -81,15 +142,13 @@ Widget mobileLayout() {
               'Download Resume',
               style: TextStyle(
                 color: Colors.white,
-                fontSize: w! * 0.030,
+                fontSize: w! * 0.024,
                 fontWeight: FontWeight.w500,
               ),
             ),
           ),
         ),
-        SizedBox(
-          height: w! * 0.20
-        ),
+        SizedBox(height: w! * 0.20),
         Container(
           height: w! * 0.8,
           width: w,
@@ -107,11 +166,20 @@ Widget mobileLayout() {
   );
 }
 
-TextStyle primaryTextStyle(Color color) {
+TextStyle mprimaryTextStyle(Color color) {
   return TextStyle(
-    fontSize: w! * 0.08,
+    fontSize: w! * 0.06,
     letterSpacing: 1.2,
-    fontWeight: FontWeight.w900,
+    fontWeight: FontWeight.bold,
+    color: color,
+  );
+}
+
+TextStyle dprimaryTextStyle(Color color) {
+  return TextStyle(
+    fontSize: w! * 0.03,
+    letterSpacing: 1.2,
+    fontWeight: FontWeight.bold,
     color: color,
   );
 }

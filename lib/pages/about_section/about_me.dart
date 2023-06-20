@@ -13,10 +13,11 @@ class AboutMe extends StatefulWidget {
 class _AboutMeState extends State<AboutMe> {
   @override
   Widget build(BuildContext context) {
+    w = MediaQuery.of(context).size.width;
+
     return ScreenTypeLayout.builder(
       desktop: (p0) => desktopAboutSection(),
       mobile: (p0) => mobileAboutSection(),
-      tablet: (p0) => tabletAboutSection(),
     );
   }
 }
@@ -125,79 +126,83 @@ Widget mobileAboutSection() {
 
 Widget desktopAboutSection() {
   return Container(
-    padding: const EdgeInsets.symmetric(
-      horizontal: 20,
-      vertical: 54,
+    padding: EdgeInsets.symmetric(
+      horizontal: w! * 0.125,
+      vertical: w! * 0.08,
     ),
     color: AppColors.bgWhite1,
     child: Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Expanded(
+        SizedBox(
+          width: w! * 0.35,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text(
+              Text(
                 "Nice to meet you!",
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: w! * 0.009,
                   fontWeight: FontWeight.w500,
                 ),
               ),
-              const SizedBox(
-                height: 8,
+              SizedBox(
+                height: w! * 0.002,
               ),
-              const Text(
+              Text(
                 "Hi there I'm Hassan",
                 style: TextStyle(
-                  fontSize: 40,
+                  fontSize: w! * 0.018,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              const SizedBox(
-                height: 32,
+              SizedBox(
+                height: w! * 0.012,
               ),
               Text(
                 "I designed a user-friendly food delivery app that enables customers to order multiple dishes from a single restaurant. Its intuitive interface makes browsing and ordering effortless, enhancing the overall food delivery experience.",
+                textAlign: TextAlign.justify,
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: w! * 0.011,
                   fontWeight: FontWeight.normal,
                   color: AppColors.subtitleTxt2,
                   height: 1.8,
                 ),
               ),
-              const SizedBox(
-                height: 34,
+              SizedBox(
+                height: w! * 0.02,
               ),
               Text(
                 "I’m passionate about building & designing delightful experiences with the combination of business, marketing and UX/UI design to make customers and users satisfied when they’re using products and services online.",
+                textAlign: TextAlign.justify,
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: w! * 0.011,
                   fontWeight: FontWeight.normal,
                   color: AppColors.subtitleTxt2,
                   height: 1.8,
                 ),
               ),
-              const SizedBox(
-                height: 34,
+              SizedBox(
+                height: w! * 0.02,
               ),
               Text(
                 "In my free time I enjoy reading and illustrating quirky characters. I am quite active over dribbble and instagram, to stay updated about me follow me there!",
+                textAlign: TextAlign.justify,
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: w! * 0.011,
                   fontWeight: FontWeight.normal,
                   color: AppColors.subtitleTxt2,
                   height: 1.8,
                 ),
               ),
-              const SizedBox(
-                height: 34,
+              SizedBox(
+                height: w! * 0.02,
               ),
               Text(
                 "Thane, Maharashtra",
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: w! * 0.011,
                   fontWeight: FontWeight.normal,
                   color: AppColors.primary,
                   height: 1.8,
@@ -206,20 +211,19 @@ Widget desktopAboutSection() {
             ],
           ),
         ),
-        const SizedBox(
-          width: 80,
+        SizedBox(
+          width: w! * 0.08,
         ),
-        Expanded(
-          child: Container(
-            height: 550,
-            width: 350,
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(
-                  "assets/images/profilepic.jpg",
-                ),
-                fit: BoxFit.cover,
+        Container(
+          height: w! * 0.3,
+          width: w! * 0.25,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(6),
+            image: const DecorationImage(
+              image: AssetImage(
+                "assets/images/profilepic.jpg",
               ),
+              fit: BoxFit.cover,
             ),
           ),
         ),

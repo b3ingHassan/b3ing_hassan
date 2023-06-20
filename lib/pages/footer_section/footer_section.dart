@@ -96,11 +96,11 @@ Widget mobileFooterSection() {
 
 dektopFooterSection() {
   return Container(
-    height: h! * 0.75,
+    height: w! * 0.5,
     width: w,
-    padding: const EdgeInsets.symmetric(
-      horizontal: 250,
-      vertical: 80,
+    padding: EdgeInsets.symmetric(
+      horizontal: w! * 0.125,
+      vertical: w! * 0.08,
     ),
     color: AppColors.bgColor2,
     child: Column(
@@ -110,49 +110,53 @@ dektopFooterSection() {
         Text(
           "Get in touch",
           style: TextStyle(
-            fontSize: 16,
+            fontSize: w! * 0.011,
             fontWeight: FontWeight.w500,
             color: AppColors.subtitleTxt1,
           ),
         ),
-        const SizedBox(
-          height: 8,
+        SizedBox(
+          height: w! * 0.003,
         ),
         Text(
           "Let's Connect",
           style: TextStyle(
-            fontSize: 48,
+            fontSize: w! * 0.032,
             fontWeight: FontWeight.bold,
             color: AppColors.accent,
           ),
         ),
-        const SizedBox(
-          height: 12,
+        SizedBox(
+          height: w! * 0.002,
         ),
         Text(
           "Have a project or opportunity in mind? Let's have a nice\nchat over it. Contact me here or email me at",
           textAlign: TextAlign.center,
           style: TextStyle(
-            fontSize: w! * 0.04,
+            fontSize: w! * 0.011,
             height: 1.8,
             fontWeight: FontWeight.normal,
             color: AppColors.subtitleTxt1,
           ),
         ),
-        const SizedBox(
-          height: 20,
+        SizedBox(
+          height: w! * 0.016,
         ),
         Container(
-          width: 270,
-          padding: const EdgeInsets.symmetric(
-            horizontal: 28,
-            vertical: 16,
-          ),
+          width: w!*0.15,
+          height: w!*0.03,
+          decoration: BoxDecoration(
           color: AppColors.primary,
+
+            borderRadius: BorderRadius.circular(6)
+          ),
           child: Center(
             child: Text(
               "hassanwm99@gmail.com",
-              style: TextStyle(fontSize: 16, color: AppColors.bgWhite1),
+              style: TextStyle( 
+            fontSize: w! * 0.008,
+                
+                 color: AppColors.bgWhite1),
             ),
           ),
         ),

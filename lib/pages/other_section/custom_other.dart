@@ -36,9 +36,11 @@ class CustomOtherDektop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    w = MediaQuery.of(context).size.width;
+    
     return Container(
-      height: 300,
-      width: 400,
+      height: w! * 0.16,
+      width: w! * 0.244,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(
           6,

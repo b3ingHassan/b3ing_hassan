@@ -14,47 +14,48 @@ class Others extends StatefulWidget {
 class _OthersState extends State<Others> {
   @override
   Widget build(BuildContext context) {
+    w = MediaQuery.of(context).size.width;
+
     return ScreenTypeLayout.builder(
       desktop: (BuildContext context) => desktopOtherSection(),
       mobile: (BuildContext context) => mobileOtherSection(),
-      tablet: (BuildContext context) => tabletOtherSection(),
     );
   }
 }
 
 Widget desktopOtherSection() {
   return Container(
-    padding: const EdgeInsets.symmetric(
-      horizontal: 250,
-      vertical: 80,
+   padding: EdgeInsets.symmetric(
+      horizontal: w! * 0.125,
+      vertical: w! * 0.08,
     ),
     color: AppColors.bgWhite1,
     width: w,
-    child: const Column(
+    child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
           "Things I do in my lesuire time",
           style: TextStyle(
-            fontSize: 16,
+            fontSize: w! * 0.009,
             fontWeight: FontWeight.w500,
           ),
         ),
         SizedBox(
-          height: 8,
+          height: w! * 0.002,
         ),
         Text(
-          "Other Interfaces",
+          "Other Interface",
           style: TextStyle(
-            fontSize: 40,
+            fontSize: w! * 0.018,
             fontWeight: FontWeight.bold,
           ),
         ),
         SizedBox(
-          height: 48,
+          height: w! * 0.012,
         ),
-        Row(
+        const Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             CustomOtherDektop(imagePath: "assets/images/ghartak.png"),
@@ -63,9 +64,9 @@ Widget desktopOtherSection() {
           ],
         ),
         SizedBox(
-          height: 16,
+          height: w! * 0.008,
         ),
-        Row(
+        const Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             CustomOtherDektop(imagePath: "assets/images/ghartak.png"),
@@ -112,15 +113,15 @@ Widget mobileOtherSection() {
             ),
           ),
         ),
-           SizedBox(
+        SizedBox(
           height: w! * 0.04,
         ),
         const CustomOther(imagePath: "assets/images/ghartak.png"),
-         SizedBox(
+        SizedBox(
           height: w! * 0.08,
         ),
         const CustomOther(imagePath: "assets/images/ghartak.png"),
-         SizedBox(
+        SizedBox(
           height: w! * 0.08,
         ),
         const CustomOther(imagePath: "assets/images/ghartak.png"),

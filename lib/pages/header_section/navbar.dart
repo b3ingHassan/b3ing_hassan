@@ -1,4 +1,5 @@
 import 'package:b3ing_hassan/utils/colors.dart';
+import 'package:b3ing_hassan/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -12,6 +13,8 @@ class NavBar extends StatefulWidget {
 class _NavBarState extends State<NavBar> {
   @override
   Widget build(BuildContext context) {
+    w = MediaQuery.of(context).size.width;
+
     // ignore: deprecated_member_use
     return ScreenTypeLayout.builder(
       mobile: (BuildContext context) => mobileNavBar(),
@@ -24,20 +27,21 @@ class _NavBarState extends State<NavBar> {
 
 Widget mobileNavBar() {
   return Container(
-    margin: const EdgeInsets.symmetric(
-      horizontal: 20,
+    margin: EdgeInsets.symmetric(
+      horizontal: w! * 0.034,
     ),
-    height: 70,
+    height: w! * 0.12,
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        navLogo(),
+        mnavLogo(),
         IconButton(
           onPressed: () {},
           icon: const Icon(
             Icons.menu,
             color: Colors.white,
           ),
+          iconSize: w! * 0.05,
         ),
       ],
     ),
@@ -48,53 +52,34 @@ Widget mobileNavBar() {
 Widget desktopNavBar() {
   return Container(
     color: AppColors.bgColor1,
-    margin: const EdgeInsets.symmetric(
-      horizontal: 250.0,
-      vertical: 12.0,
+    padding: EdgeInsets.symmetric(
+      horizontal: w! * 0.125,
     ),
-    height: 70,
+    height: w! * 0.05,
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        navLogo(),
-        Row(
-          children: [
-            navButton('Work Flow'),
-            const SizedBox(
-              width: 48.0,
-            ),
-            navButton('Portfolio'),
-            const SizedBox(
-              width: 48.0,
-            ),
-            navButton("About me"),
-          ],
+        dnavLogo(),
+        const Spacer(),
+        dnavButton('Work Flow'),
+        SizedBox(
+          width: w! * 0.028,
         ),
-        Container(
-          height: 45,
-          width: 144,
-          padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 12.0),
-          decoration: BoxDecoration(
-            color: AppColors.primary,
-            borderRadius: BorderRadius.circular(4.0),
-          ),
-          child: const Center(
-            child: Text(
-              'Contact me',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 16.0,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-          ),
-        )
+        dnavButton('Portfolio'),
+        SizedBox(
+          width: w! * 0.028,
+        ),
+        dnavButton("About me"),
+        SizedBox(
+          width: w! * 0.028,
+        ),
+        dnavButton("Contact")
       ],
     ),
   );
 }
 
-Widget navButton(String txt) {
+Widget mnavButton(String txt) {
   return Container(
     margin: const EdgeInsets.symmetric(horizontal: 10.0),
     child: TextButton(
@@ -110,13 +95,13 @@ Widget navButton(String txt) {
   );
 }
 
-Widget navLogo() {
+Widget dnavLogo() {
   return Row(
     children: [
-      const Text(
+      Text(
         "b3ing",
         style: TextStyle(
-          fontSize: 20.0,
+          fontSize: w! * 0.014,
           fontWeight: FontWeight.bold,
           color: Colors.white,
         ),
@@ -124,11 +109,50 @@ Widget navLogo() {
       Text(
         "Hassan",
         style: TextStyle(
-          fontSize: 20.0,
+          fontSize: w! * 0.016,
+          fontWeight: FontWeight.bold,
+          color: AppColors.accent,
+        ),
+      ),
+    ],
+  );
+}
+
+Widget mnavLogo() {
+  return Row(
+    children: [
+      Text(
+        "b3ing",
+        style: TextStyle(
+          fontSize: w! * 0.035,
+          fontWeight: FontWeight.bold,
+          color: Colors.white,
+        ),
+      ),
+      Text(
+        "Hassan",
+        style: TextStyle(
+          fontSize: w! * 0.035,
           fontWeight: FontWeight.bold,
           color: AppColors.primary,
         ),
       ),
     ],
+  );
+}
+
+Widget dnavButton(String txt) {
+  return Container(
+    margin: const EdgeInsets.symmetric(horizontal: 10.0),
+    child: TextButton(
+      onPressed: () {},
+      child: Text(
+        txt,
+        style: TextStyle(
+          color: const Color(0xffffffff),
+          fontSize: w! * 0.009,
+        ),
+      ),
+    ),
   );
 }
