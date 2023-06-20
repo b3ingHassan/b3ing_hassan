@@ -27,10 +27,9 @@ Widget dektopLayout() {
 Widget mobileLayout() {
   return Container(
     width: w,
-    color: AppColors.bgColor1,
-    padding: EdgeInsets.symmetric(
-      horizontal: w! * 0.034,
-      vertical: h! * 0.024,
+    margin: EdgeInsets.symmetric(
+      horizontal: w! * 0.050,
+      vertical: h! * 0.044,
     ),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -51,43 +50,45 @@ Widget mobileLayout() {
           ),
         ),
         SizedBox(
-          height: w! * 0.008,
+          height: w! * 0.04,
         ),
         Text(
           "Creating Engaging Interfaces that Connect\nUsers with Purposeful Design Solutions.",
           textAlign: TextAlign.center,
           style: TextStyle(
-            fontSize: w! * 0.04,
+            fontSize: w! * 0.036,
+            letterSpacing: 1,
+            height: 1.6,
             fontWeight: FontWeight.normal,
             color: AppColors.subtitleTxt1,
           ),
         ),
-         SizedBox(
-          height: w!*0.03,
+        SizedBox(
+          height: w! * 0.04,
         ),
         Container(
-          height: w!*0.09,
-          width: w!*0.4,
-          padding:  EdgeInsets.symmetric(
-             horizontal: w! * 0.034,
+          height: w! * 0.12,
+          width: w! * 0.42,
+          padding: EdgeInsets.symmetric(
+            horizontal: w! * 0.034,
           ),
           decoration: BoxDecoration(
             color: AppColors.primary,
             borderRadius: BorderRadius.circular(4.0),
           ),
-          child:  Center(
+          child: Center(
             child: Text(
               'Download Resume',
               style: TextStyle(
                 color: Colors.white,
-                fontSize: w!*0.028,
-                fontWeight: FontWeight.normal,
+                fontSize: w! * 0.030,
+                fontWeight: FontWeight.w500,
               ),
             ),
           ),
         ),
-         SizedBox(
-          height: w!*0.08,
+        SizedBox(
+          height: w! * 0.20
         ),
         Container(
           height: w! * 0.8,
@@ -109,7 +110,8 @@ Widget mobileLayout() {
 TextStyle primaryTextStyle(Color color) {
   return TextStyle(
     fontSize: w! * 0.08,
-    fontWeight: FontWeight.bold,
+    letterSpacing: 1.2,
+    fontWeight: FontWeight.w900,
     color: color,
   );
 }
