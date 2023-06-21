@@ -19,8 +19,40 @@ class _NavBarState extends State<NavBar> {
     return ScreenTypeLayout.builder(
       mobile: (BuildContext context) => mobileNavBar(),
       desktop: (BuildContext context) => desktopNavBar(),
+      tablet: (BuildContext context) => tabletNavBar(),
     );
   }
+}
+
+Widget tabletNavBar() {
+  return Container(
+    height: w! * 0.1,
+    width: w,
+    color: AppColors.bgColor1,
+    padding: EdgeInsets.symmetric(
+      horizontal: w! * 0.020,
+    ),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        tnavLogo(),
+        const Spacer(),
+        tnavButton('Work Flow'),
+        SizedBox(
+          width: w! * 0.028,
+        ),
+        tnavButton('Portfolio'),
+        SizedBox(
+          width: w! * 0.028,
+        ),
+        tnavButton("About me"),
+        SizedBox(
+          width: w! * 0.028,
+        ),
+        tnavButton("Contact")
+      ],
+    ),
+  );
 }
 
 ////======== MOBILE ========////
@@ -118,6 +150,29 @@ Widget dnavLogo() {
   );
 }
 
+Widget tnavLogo() {
+  return Row(
+    children: [
+      Text(
+        "b3ing",
+        style: TextStyle(
+          fontWeight: FontWeight.bold,
+          color: Colors.white,
+          fontSize: w! * 0.023,
+        ),
+      ),
+      Text(
+        "Hassan",
+        style: TextStyle(
+          fontSize: w! * 0.023,
+          fontWeight: FontWeight.bold,
+          color: AppColors.accent,
+        ),
+      ),
+    ],
+  );
+}
+
 Widget mnavLogo() {
   return Row(
     children: [
@@ -151,6 +206,22 @@ Widget dnavButton(String txt) {
         style: TextStyle(
           color: const Color(0xffffffff),
           fontSize: w! * 0.009,
+        ),
+      ),
+    ),
+  );
+}
+
+Widget tnavButton(String txt) {
+  return Container(
+    margin: const EdgeInsets.symmetric(horizontal: 10.0),
+    child: TextButton(
+      onPressed: () {},
+      child: Text(
+        txt,
+        style: TextStyle(
+          color: const Color(0xffffffff),
+          fontSize: w! * 0.014,
         ),
       ),
     ),

@@ -18,8 +18,74 @@ class _FooterSectionState extends State<FooterSection> {
     return ScreenTypeLayout.builder(
       desktop: (p0) => dektopFooterSection(),
       mobile: (p0) => mobileFooterSection(),
+      tablet: (p0) => tabletFooterSection(),
     );
   }
+}
+
+Widget tabletFooterSection() {
+  return Container(
+    height: w! * 0.8,
+    width: w,
+    color: AppColors.bgColor1,
+    padding: EdgeInsets.symmetric(
+      horizontal: w! * 0.020,
+      vertical: w! * 0.085,
+    ),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          "Get in touch",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: w! * 0.015,
+            fontWeight: FontWeight.w500,
+            color: AppColors.bgWhite1,
+          ),
+        ),
+        Text(
+          "Let's Connect!",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: w! * 0.05,
+            fontWeight: FontWeight.bold,
+            color: AppColors.accent,
+          ),
+        ),
+        SizedBox(
+          height: w! * 0.008,
+        ),
+        Text(
+          "Have a project or opportunity in mind? Let's have a nice \nchat over it. Contact me here or email me at",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+              fontSize: w! * 0.021,
+              fontWeight: FontWeight.normal,
+              color: AppColors.bgWhite1,
+              height: 1.6),
+        ),
+        SizedBox(height: w! * 0.028),
+        Container(
+          height: w! * 0.05,
+          width: w! * 0.25,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(4), color: AppColors.primary),
+          child: Center(
+            child: Text(
+              "hassanwm99@gmail.com",
+              style: TextStyle(
+                fontSize: w! * 0.015,
+                color: AppColors.bgWhite1,
+                fontWeight: FontWeight.normal,
+              ),
+            ),
+          ),
+        )
+      ],
+    ),
+  );
 }
 
 Widget mobileFooterSection() {
@@ -143,20 +209,14 @@ dektopFooterSection() {
           height: w! * 0.016,
         ),
         Container(
-          width: w!*0.15,
-          height: w!*0.03,
+          width: w! * 0.15,
+          height: w! * 0.03,
           decoration: BoxDecoration(
-          color: AppColors.primary,
-
-            borderRadius: BorderRadius.circular(6)
-          ),
+              color: AppColors.primary, borderRadius: BorderRadius.circular(6)),
           child: Center(
             child: Text(
               "hassanwm99@gmail.com",
-              style: TextStyle( 
-            fontSize: w! * 0.008,
-                
-                 color: AppColors.bgWhite1),
+              style: TextStyle(fontSize: w! * 0.008, color: AppColors.bgWhite1),
             ),
           ),
         ),

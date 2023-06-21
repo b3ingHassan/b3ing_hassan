@@ -19,13 +19,14 @@ class _OthersState extends State<Others> {
     return ScreenTypeLayout.builder(
       desktop: (BuildContext context) => desktopOtherSection(),
       mobile: (BuildContext context) => mobileOtherSection(),
+      tablet: (BuildContext context) => tabletOtherSection(),
     );
   }
 }
 
 Widget desktopOtherSection() {
   return Container(
-   padding: EdgeInsets.symmetric(
+    padding: EdgeInsets.symmetric(
       horizontal: w! * 0.125,
       vertical: w! * 0.08,
     ),
@@ -132,51 +133,53 @@ Widget mobileOtherSection() {
 
 Widget tabletOtherSection() {
   return Container(
-    padding: const EdgeInsets.symmetric(
-      horizontal: 60,
-      vertical: 80,
-    ),
+    width: w,
     color: AppColors.bgWhite1,
-    child: const Column(
+    padding: EdgeInsets.symmetric(
+      horizontal: w! * 0.020,
+      vertical: w! * 0.085,
+    ),
+    child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          "Things I do in my leisure time",
+          "Portfolio",
           style: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w500,
+            fontSize: w! * 0.018,
+            fontWeight: FontWeight.normal,
           ),
         ),
         SizedBox(
-          height: 8,
+          height: w! * 0.008,
         ),
         Text(
-          "Other Design Interface",
+          "Best Projects",
           style: TextStyle(
-            fontSize: 34,
+            fontSize: w! * 0.03,
             fontWeight: FontWeight.bold,
           ),
         ),
         SizedBox(
-          height: 48,
+          height: w! * 0.024,
         ),
-        Row(
+        const Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            CustomOther(imagePath: "assets/images/ghartak.png"),
-            CustomOther(imagePath: "assets/images/ghartak.png"),
-            CustomOther(imagePath: "assets/images/ghartak.png"),
+            TabletCustomOtherDektop(imagePath: "assets/images/ghartak.png"),
+            TabletCustomOtherDektop(imagePath: "assets/images/ghartak.png"),
+            TabletCustomOtherDektop(imagePath: "assets/images/ghartak.png")
           ],
         ),
         SizedBox(
-          height: 16,
+          height: w! * 0.014,
         ),
-        Row(
+        const Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            CustomOther(imagePath: "assets/images/ghartak.png"),
-            CustomOther(imagePath: "assets/images/ghartak.png"),
-            CustomOther(imagePath: "assets/images/ghartak.png"),
+            TabletCustomOtherDektop(imagePath: "assets/images/ghartak.png"),
+            TabletCustomOtherDektop(imagePath: "assets/images/ghartak.png"),
+            TabletCustomOtherDektop(imagePath: "assets/images/ghartak.png")
           ],
         ),
       ],

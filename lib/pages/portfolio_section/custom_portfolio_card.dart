@@ -101,12 +101,70 @@ class CustomPortFolioDesktop extends StatelessWidget {
             color: AppColors.titleTxt,
           ),
         ),
-         SizedBox(height: w!*0.002),
+        SizedBox(height: w! * 0.002),
         Text(
           description,
           textAlign: TextAlign.justify,
           style: TextStyle(
             fontSize: w! * 0.011,
+            height: 1.8,
+            fontWeight: FontWeight.normal,
+            color: AppColors.subtitleTxt2,
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class CustomPortfolioTablet extends StatelessWidget {
+  final String title;
+  final String description;
+  final String imagePath;
+
+  const CustomPortfolioTablet({
+    super.key,
+    required this.title,
+    required this.description,
+    required this.imagePath,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    w = MediaQuery.of(context).size.width;
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Container(
+          height: w! * 0.4,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(
+              6,
+            ),
+            image: DecorationImage(
+              image: AssetImage(imagePath),
+              fit: BoxFit.cover,
+            ),
+          ),
+        ),
+        SizedBox(
+          height: w! * 0.012,
+        ),
+        Text(
+          title,
+          style: TextStyle(
+            fontSize: w! * 0.025,
+            fontWeight: FontWeight.w500,
+            color: AppColors.titleTxt,
+          ),
+        ),
+        SizedBox(height: w! * 0.002),
+        Text(
+          description,
+          textAlign: TextAlign.justify,
+          style: TextStyle(
+            fontSize: w! * 0.018,
             height: 1.8,
             fontWeight: FontWeight.normal,
             color: AppColors.subtitleTxt2,

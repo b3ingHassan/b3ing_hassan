@@ -18,6 +18,7 @@ class _AboutMeState extends State<AboutMe> {
     return ScreenTypeLayout.builder(
       desktop: (p0) => desktopAboutSection(),
       mobile: (p0) => mobileAboutSection(),
+      tablet: (p0) => tabletAboutSection(),
     );
   }
 }
@@ -234,87 +235,102 @@ Widget desktopAboutSection() {
 
 Widget tabletAboutSection() {
   return Container(
-    padding: const EdgeInsets.symmetric(
-      horizontal: 20,
-      vertical: 54,
-    ),
+    width: w,
     color: AppColors.bgWhite1,
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+    padding: EdgeInsets.symmetric(
+      horizontal: w! * 0.020,
+      vertical: w! * 0.085,
+    ),
+    child: Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Text(
-          "Nice to meet you!",
-          style: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w500,
+        SizedBox(
+          width: w! * 0.5,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Portfolio",
+                style: TextStyle(
+                  fontSize: w! * 0.018,
+                  fontWeight: FontWeight.normal,
+                ),
+              ),
+              SizedBox(
+                height: w! * 0.008,
+              ),
+              Text(
+                "Best Projects",
+                style: TextStyle(
+                  fontSize: w! * 0.03,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(
+                height: w! * 0.024,
+              ),
+              Text(
+                "I designed a user-friendly food delivery app that enables customers to order multiple dishes from a single restaurant. Its intuitive interface makes browsing and ordering effortless, enhancing the overall food delivery experience.",
+                textAlign: TextAlign.justify,
+                style: TextStyle(
+                  fontSize: w! * 0.018,
+                  fontWeight: FontWeight.normal,
+                  color: AppColors.subtitleTxt2,
+                  height: 1.8,
+                ),
+              ),
+              SizedBox(
+                height: w! * 0.02,
+              ),
+              Text(
+                "I’m passionate about building & designing delightful experiences with the combination of business, marketing and UX/UI design to make customers and users satisfied when they’re using products and services online.",
+                textAlign: TextAlign.justify,
+                style: TextStyle(
+                  fontSize: w! * 0.018,
+                  fontWeight: FontWeight.normal,
+                  color: AppColors.subtitleTxt2,
+                  height: 1.8,
+                ),
+              ),
+              SizedBox(
+                height: w! * 0.02,
+              ),
+              Text(
+                "In my free time I enjoy reading and illustrating quirky characters. I am quite active over dribbble and instagram, to stay updated about me follow me there!",
+                textAlign: TextAlign.justify,
+                style: TextStyle(
+                  fontSize: w! * 0.018,
+                  fontWeight: FontWeight.normal,
+                  color: AppColors.subtitleTxt2,
+                  height: 1.8,
+                ),
+              ),
+              SizedBox(
+                height: w! * 0.02,
+              ),
+              Text(
+                "Thane, Maharashtra",
+                style: TextStyle(
+                  fontSize: w! * 0.018,
+                  fontWeight: FontWeight.normal,
+                  color: AppColors.primary,
+                  height: 1.8,
+                ),
+              ),
+            ],
           ),
         ),
-        const SizedBox(
-          height: 8,
-        ),
-        const Text(
-          "Hi there I'm Hassan",
-          style: TextStyle(
-            fontSize: 34,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        const SizedBox(
-          height: 32,
-        ),
-        Text(
-          "I designed a user-friendly food delivery app that enables customers to order multiple dishes from a single restaurant. Its intuitive interface makes browsing and ordering effortless, enhancing the overall food delivery experience.",
-          style: TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.normal,
-            color: AppColors.subtitleTxt2,
-            height: 1.8,
-          ),
-        ),
-        const SizedBox(
-          height: 34,
-        ),
-        Text(
-          "I’m passionate about building & designing delightful experiences with the combination of business, marketing and UX/UI design to make customers and users satisfied when they’re using products and services online.",
-          style: TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.normal,
-            color: AppColors.subtitleTxt2,
-            height: 1.8,
-          ),
-        ),
-        const SizedBox(
-          height: 34,
-        ),
-        Text(
-          "In my free time I enjoy reading and illustrating quirky characters. I am quite active over dribbble and instagram, to stay updated about me follow me there!",
-          style: TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.normal,
-            color: AppColors.subtitleTxt2,
-            height: 1.8,
-          ),
-        ),
-        const SizedBox(
-          height: 34,
-        ),
-        Text(
-          "Thane, Maharashtra",
-          style: TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.normal,
-            color: AppColors.primary,
-            height: 1.8,
-          ),
-        ),
-        const SizedBox(
-          height: 34,
+        SizedBox(
+          width: w! * 0.08,
         ),
         Container(
-          height: 350,
-          width: 350,
-          decoration: const BoxDecoration(
-            image: DecorationImage(
+          height: w! * 0.4,
+          width: w! * 0.35,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(6),
+            image: const DecorationImage(
               image: AssetImage(
                 "assets/images/profilepic.jpg",
               ),
