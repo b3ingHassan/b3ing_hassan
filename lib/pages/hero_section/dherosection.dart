@@ -4,25 +4,17 @@ import 'package:flutter/material.dart';
 
 Widget dektopHeroSection() {
   return Container(
-   
     color: AppColors.bgColor1,
     padding: EdgeInsets.symmetric(
       horizontal: w! * 0.125,
-      vertical: w! * 0.14,
+      vertical: w! * 0.15,
     ),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          "I'm Hassan Momin",
-          textAlign: TextAlign.center,
-          style: dprimaryTextStyle(
-            AppColors.bgWhite1,
-          ),
-        ),
-        Text(
-          "UI UX Designer",
+          "From Pixels to Flutter Magic: Unleashing Creativity\nas a UI UX Enthusiast and Flutter Developer.",
           textAlign: TextAlign.center,
           style: dprimaryTextStyle(
             AppColors.accent,
@@ -32,7 +24,7 @@ Widget dektopHeroSection() {
           height: w! * 0.01,
         ),
         Text(
-          "Creating Engaging Interfaces that Connect\nUsers with Purposeful Design Solutions.",
+          "Hi, I'm Hassan Momin, a UI/UX Designer and Flutter Developer. I specialize in\ncreating beautiful and user-friendly interfaces.",
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: w! * 0.011,
@@ -70,7 +62,7 @@ Widget dektopHeroSection() {
 
 TextStyle dprimaryTextStyle(Color color) {
   return TextStyle(
-    fontSize: w! * 0.03,
+    fontSize: w! * 0.02,
     letterSpacing: 1.2,
     fontWeight: FontWeight.bold,
     color: color,

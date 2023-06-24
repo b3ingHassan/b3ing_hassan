@@ -332,7 +332,7 @@ dektopFooterSection() {
                 'Submit',
                 style: TextStyle(
                   color: AppColors.bgWhite1,
-                  fontSize: w! * 0.010,
+                  fontSize: w! * 0.008,
                   fontWeight: FontWeight.w500,
                 ),
               ),

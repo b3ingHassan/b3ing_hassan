@@ -19,6 +19,7 @@ Widget desktopDesignProcessLayout() {
           style: TextStyle(
             fontSize: w! * 0.009,
             fontWeight: FontWeight.w500,
+            
           ),
         ),
         SizedBox(

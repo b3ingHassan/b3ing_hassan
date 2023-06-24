@@ -20,7 +20,7 @@ class _NavBarSectionState extends State<NavBarSection> {
     // ignore: deprecated_member_use
     return ScreenTypeLayout.builder(
       mobile: (BuildContext context) => mobileNavBarSection(),
-      desktop: (BuildContext context) => desktopNavBarSection(),
+      desktop: (BuildContext context) =>desktopNavBarSection(),
       tablet: (BuildContext context) => tabletNavBarSection(),
     );
   }
